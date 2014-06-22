@@ -1,6 +1,6 @@
-## The functions "makeCacheMatrix" and "cacheSolve" presented below, are part of a logic to cache the inverse of a matrix in memory.
-## This is special useful for large matrices making the process of inverting such matrices much faster.
-## A matrice is initially solved and the result is stored in memory, for subsequent uses it is retrieved from memory without the need to be inverted again.
+## The functions "makeCacheMatrix" and "cacheSolve" presented below, are part of the logic to cache the inverse of a matrix in memory.
+## This is useful on large matrices making the process of inverting such matrices much faster.
+## A matrix is initially solved, and the result is stored in memory, for subsequent uses it is retrieved from memory without the need to be inverted again.
 
 ## The code below is similar to the example functions provided for this assignment to calculate the mean of a vector where the function mean was used.
 
@@ -13,7 +13,7 @@
 ##        [1,]    3    5
 ##        [2,]    2    7
 
-## The function "cacheSolve" creates the inverse of a matrix if is not alrerady solved and returns the inverted matrix, for example:
+## The function "cacheSolve" creates the inverse of a matrix if is not already solved and returns the inverted matrix, for example:
 ## y <- cacheSolve(x), this create the inverse of x which is:
 ##      [,1]       [,2]
 ##      [1,]  0.6363636 -0.4545455
@@ -25,9 +25,9 @@
 ##      [1,]    1    0
 ##      [2,]    0    1
 
-## To use thse functions correctly the input matrix needs to be a square matrix and it should be possible to invert it.
+## To use these functions correctly the input matrix needs to be a square matrix, and it should be possible to invert it.
 
-## This function returns a list of functions to deal with the cache of a matix and stores its value in memory. The matrix x and its inverse m are kept in memory for future uses.
+## This function returns a list of functions to deal with the cache of a matrix and stores its value in memory. The matrix x and its inverse m are kept in memory for future uses.
 ## To access the original matrix the function get is used, and to get the inverse the getInverse function is used
 ## The function makeCacheMatrix defines four other functions:
 ##      set             - to setup a new matrix and stores its value into x. At the same time m is reset to invalidat any other values
